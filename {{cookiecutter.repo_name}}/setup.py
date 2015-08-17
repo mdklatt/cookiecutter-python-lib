@@ -120,7 +120,7 @@ class VirtualenvCommand(_CustomCommand):
         venv = "virtualenv {:s}"
         if self.python:
             venv += " -p {:s}"
-        pip = "{:s}/bin/pip install -r {:s}" if self.requirements else None
+        pip = "{0:s}/bin/pip install -r {2:s}" if self.requirements else None
         args = self.name, self.python, self.requirements
         try:
             check_call(venv.format(*args).split())
