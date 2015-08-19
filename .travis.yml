@@ -1,6 +1,6 @@
 ## Travis CI configuration for the cookiecutter-python-lib project template.
 ##
-## This verifies that a sample project can be created from the template,
+## This verifies that a sample project can be created from the template, be
 ## installed, and pass a basic test suite.
 ##
 language: python
@@ -27,8 +27,8 @@ install:
   - python setup.py install
 
 before_script:
-  # Travis CI preinstalls py.test, but automatic test discovery fails for
-  # the current version (2.6), so make sure the correct version is installed.
+  # Travis CI preinstalls py.test, but automatic test discovery fails for the
+  # default version (2.6), so make sure the correct version is installed.
   - pip install --requirement=requirements-test.txt
 
 script:
