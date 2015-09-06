@@ -1,7 +1,7 @@
 Overview
 ========
 
-This is the {{cookiecutter.repo_name}} library.
+This is the {{ cookiecutter.repo_name }} library.
 
 
 Minimum Requirements

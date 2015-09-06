@@ -1,4 +1,4 @@
-""" Library package.
+""" Package for the {{ cookiecutter.repo_name }} library.
 
 """
 from __future__ import absolute_import
