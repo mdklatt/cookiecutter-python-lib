@@ -1,6 +1,9 @@
 ## Travis CI configuration for the cookiecutter-python-lib project template.
 ##
+##   <https://travis-ci.org/mdklatt/cookiecutter-python-lib>
+##
 language: python
+
 python:
   - "2.7"
 
