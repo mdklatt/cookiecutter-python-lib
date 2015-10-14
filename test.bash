@@ -1,7 +1,8 @@
 ## Test the python-lib Cookiecutter template.
 ##
-## This verifies that a sample project can be created from the template, be
-## installed, and pass a basic test suite.
+## A template project is created in a temporary directory, the application is
+## installed into a self-contained virtualenv environment, and the application
+## test suite is run.
 ##
 set -e  # exit immediately on failure
 if [[ "$(uname)" == "Darwin" ]]
@@ -11,15 +12,13 @@ else  # assume Linux/GNU or similar
     MKTEMP="mktemp -d"
 fi
 template=$(pwd)
-project=$(${MKTEMP})
-trap "rm -rf $project" EXIT  # remove on exit
-pushd $project
-echo $template
-echo $project
+tmpdir=$(${MKTEMP})
+trap "rm -rf $tmpdir" EXIT  # remove on exit
+pushd $tmpdir
 cookiecutter $template --no-input
 cd pylib
-python setup.py virtualenv -r requirements-test.txt
-venv/bin/pip install .
+python setup.py virtualenv
+venv/bin/pip install . -r requirements.txt -r requirements-test.txt
 venv/bin/py.test --verbose test/
 popd
 exit 0
