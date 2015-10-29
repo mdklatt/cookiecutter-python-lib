@@ -15,15 +15,15 @@ _CONFIG = {
     "author": "{{ cookiecutter.author_name   }}",
     "author_email": "{{ cookiecutter.author_email }}",
     "url": "",
-    "package_dir": {"": "src"},
-    "packages": find_packages("src")}
+    "package_dir": {"": "lib"},
+    "packages": find_packages("lib")}
 
 
 def version():
     """ Get the local package version.
 
     """
-    path = join("src", _CONFIG["name"], "__version__.py")
+    path = join("lib", _CONFIG["name"], "__version__.py")
     with open(path) as stream:
         exec(stream.read())
     return __version__
