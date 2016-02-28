@@ -1,4 +1,4 @@
-""" Current version of the {{ cookiecutter.repo_name }} library.
+""" Current version of the {{ cookiecutter.lib_name }} library.
 
 This project uses the Semantic Versioning scheme in conjunction with PEP 0440:
 

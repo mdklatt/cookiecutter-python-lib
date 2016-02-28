@@ -1,4 +1,4 @@
-""" Test suite for the {{ cookiecutter.repo_name }} library template.
+""" Test suite for the {{ cookiecutter.lib_name }} library template.
 
 The script can be executed on its own or incorporated into a larger test suite.
 However the tests are run, be aware of which version of the package is actually
@@ -14,7 +14,7 @@ def test_version():
     """ Test the library version.
 
     """
-    from {{ cookiecutter.repo_name }} import __version__
+    from {{ cookiecutter.lib_name }} import __version__
     assert __version__ == "{{ cookiecutter.project_version }}"
     return
 

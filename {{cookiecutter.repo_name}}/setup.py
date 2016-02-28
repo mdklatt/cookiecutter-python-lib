@@ -1,4 +1,4 @@
-""" Setup script for the {{ cookiecutter.repo_name }} library.
+""" Setup script for the {{ cookiecutter.lib_name }} library.
 
 """
 from setuptools import Command
@@ -11,7 +11,7 @@ from subprocess import CalledProcessError
 
 
 _CONFIG = {
-    "name": "{{ cookiecutter.repo_name }}",
+    "name": "{{ cookiecutter.lib_name }}",
     "author": "{{ cookiecutter.author_name   }}",
     "author_email": "{{ cookiecutter.author_email }}",
     "url": "",
