@@ -5,17 +5,17 @@
 language: python
 
 python:
-  - "2.7"
+- "2.7"
 
 branches:
   only:
-    - master
-    - dev
+  - master
+  - dev
 
 sudo: false
 
 before_script:
-  - pip install --requirement=requirements.txt
+- pip install -r requirements.txt -r tests/requirements.txt
 
 script:
-  - python test.py
+- python tests/test_template.py
