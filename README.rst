@@ -1,8 +1,9 @@
+===============================
 Python Library Project Template
 ===============================
 
 Overview |travis.png|
----------------------
+=====================
 
 This is a `Cookiecutter`_ template for creating a Python library project.
 
@@ -23,7 +24,7 @@ project root provides several advantages (*cf.* `Packaging a Python library`_).
 
 
 Template Project Features
--------------------------
+=========================
 
 * Python 2.7
 * `py.test`_ tests
@@ -39,13 +40,13 @@ Template Project Features
 
 
 Minimum Requirements
---------------------
+====================
 
-* `Cookiecutter`_ 1.0 (requires Python)
+* `Cookiecutter`_ 1.4 (requires Python)
 
 
 Usage
------
+=====
 
 Install Python requirements for using the template:
 
