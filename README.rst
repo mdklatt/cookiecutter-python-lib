@@ -20,6 +20,11 @@ conventional wisdom forgoes the use of a source directory, but moving the
 package out of the project root provides several advantages (*cf.* 
 `Packaging a Python library`_).
 
+.. _py34: https://github.com/mdklatt/cookiecutter-python-lib/tree/py34
+
+The `py34`_ branch is an experimental fork for Python 3.4+ compatibility. This 
+will soon become the main development fork, and Python 2.7 support will be
+deprecated.
 
 
 Template Project Features
