@@ -5,17 +5,20 @@
 language: python
 
 python:
-  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
 
 branches:
   only:
-    - master
-    - dev
+    # TODO: master 
+    # TODO: dev
+    - py34
 
 sudo: false
 
-before_script:
-  - pip install -r requirements.txt -r tests/requirements.txt
+install:
+  - pip install --requirement=requirements.txt --requirement=tests/requirements.txt
 
 script:
   - python tests/test_template.py
