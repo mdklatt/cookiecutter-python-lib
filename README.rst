@@ -13,18 +13,15 @@ Python Library Project Template
 .. _Python Packaging User Guide: https://packaging.python.org/en/latest/distributing.html#configuring-your-project
 .. _Packaging a Python library: http://blog.ionelmc.ro/2014/05/25/python-packaging/
 
+**Python 2.7 support is deprecated.**
+**This branch is no longer actively maintained.**
+
 This is a `Cookiecutter`_ template for creating a Python library project.
 
 The project layout is based on the `Python Packaging User Guide`. The current
 conventional wisdom forgoes the use of a source directory, but moving the 
 package out of the project root provides several advantages (*cf.* 
 `Packaging a Python library`_).
-
-.. _py34: https://github.com/mdklatt/cookiecutter-python-lib/tree/py34
-
-The `py34`_ branch is an experimental fork for Python 3.4+ compatibility. This 
-will soon become the main development fork, and Python 2.7 support will be
-deprecated.
 
 
 Template Project Features
@@ -56,4 +53,4 @@ Create a new project directly from the template on `GitHub`_:
 
 .. code-block:: console
    
-    $ cookiecutter gh:mdklatt/cookiecutter-python-lib
+    $ cookiecutter gh:mdklatt/cookiecutter-python-lib --checkout=py27
