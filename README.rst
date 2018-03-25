@@ -32,7 +32,7 @@ Template Project Features
 .. _MIT License: http://choosealicense.com/licenses/mit
 
 - Python 2.7
-- `pytest`_ tests
+- `pytest`_ test suite
 - `Sphinx`_ documentation
 - `MIT License`_
 
@@ -53,4 +53,4 @@ Create a new project directly from the template on `GitHub`_:
 
 .. code-block:: console
    
-    $ cookiecutter gh:mdklatt/cookiecutter-python-lib --checkout=py27
+    $ cookiecutter https://github.com/mdklatt/cookiecutter-python-lib.git --checkout=py27
