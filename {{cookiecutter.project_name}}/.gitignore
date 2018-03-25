@@ -8,7 +8,12 @@ dist/
 *.pyo
 
 
-# Ignore virtualenv environments.
+# Ignore pyenv files.
+
+.python-version
+
+
+# Ignore venv environments.
 
 venv*/
 

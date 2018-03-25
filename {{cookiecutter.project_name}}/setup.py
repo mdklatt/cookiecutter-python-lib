@@ -19,14 +19,15 @@ _CONFIG = {
     "packages": find_packages("src")}
 
 
-def version():
+def _version():
     """ Get the local package version.
 
     """
     path = join("src", _CONFIG["name"], "__version__.py")
+    namespace = {}
     with open(path) as stream:
-        exec(stream.read())
-    return __version__
+        exec(stream.read(), namespace)
+    return namespace["__version__"]
 
 
 class _CustomCommand(Command):
@@ -94,52 +95,12 @@ class UpdateCommand(_CustomCommand):
         return
 
 
-class VirtualenvCommand(_CustomCommand):
-    """ Custom setup command to create a virtualenv environment.
-
-    """
-    description = "create a virtualenv environment"
-    user_options = [
-        ("name=", "m", "environment name [default: venv]"),
-        ("python=", "p", "Python interpreter"),
-        ("requirements=", "r", "pip requirements file")]
-
-    def initialize_options(self):
-        """ Set the default values for all user options.
-
-        """
-        self.name = "venv"
-        self.python = None  # default to version used to install virtualenv
-        self.requirements = None
-        return
-
-    def run(self):
-        """ Execute the command.
-
-        """
-        venv = "virtualenv {:s}"
-        if self.python:
-            venv += " -p {:s}"
-        pip = "{0:s}/bin/pip install -r {2:s}" if self.requirements else None
-        args = self.name, self.python, self.requirements
-        try:
-            check_call(venv.format(*args).split())
-            if pip:
-                log.info("installing requirements")
-                check_call(pip.format(*args).split())
-        except CalledProcessError:
-            raise SystemExit(1)
-        return
-
-
 def main():
     """ Execute the setup commands.
 
     """
-    _CONFIG["version"] = version()
-    _CONFIG["cmdclass"] = {
-        "virtualenv": VirtualenvCommand,
-        "update": UpdateCommand}
+    _CONFIG["version"] = _version()
+    _CONFIG["cmdclass"] = {"update": UpdateCommand}
     setup(**_CONFIG)
     return 0
 
