@@ -1,4 +1,4 @@
-{% set delim = "=" * cookiecutter.lib_name|length %}
+{% set delim = "=" * cookiecutter.lib_name|length -%}
 {{ delim }}
 {{ cookiecutter.lib_name }}
 {{ delim }}
@@ -9,7 +9,7 @@ This is the {{ cookiecutter.lib_name }} library.
 Minimum Requirements
 ====================
 
-- Python 2.7
+- Python 3.4
 
 
 Optional Requirements
