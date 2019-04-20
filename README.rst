@@ -1,9 +1,9 @@
-===============================
+###############################
 Python Library Project Template
-===============================
+###############################
 
 .. _travis: https://travis-ci.org/mdklatt/cookiecutter-python-lib
-.. |travis.png| image:: https://travis-ci.org/mdklatt/cookiecutter-python-lib.png?branch=py34
+.. |travis.png| image:: https://travis-ci.org/mdklatt/cookiecutter-python-lib.png
    :alt: Travis CI build status
    :target: `travis`_
 
@@ -28,8 +28,9 @@ The `py27`_ branch is for Python 2.7 compatibility; it is no longer actively
 maintained.
 
 
-Template Project Features
-=========================
+================
+Project Features
+================
 
 .. _pytest: http://pytest.org
 .. _Sphinx: http://sphinx-doc.org
@@ -41,6 +42,7 @@ Template Project Features
 - `Sphinx`_ documentation
 
 
+=====
 Usage
 =====
 
@@ -50,11 +52,11 @@ Install Python requirements for using the template:
 
 .. code-block:: console
 
-    $ python -m pip install --requirement=requirements.txt --user 
+  $ python -m pip install --requirement=requirements.txt --user 
 
 
 Create a new project directly from the template on `GitHub`_:
 
 .. code-block:: console
    
-    $ cookiecutter gh:mdklatt/cookiecutter-python-lib
+  $ cookiecutter gh:mdklatt/cookiecutter-python-lib
