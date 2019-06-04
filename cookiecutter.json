@@ -1,5 +1,6 @@
 {
     "project_slug": "pylib",
+    "project_url": "",
     "lib_name": "{{ cookiecutter.project_slug }}",
     "author_name": "",
     "author_email": "",

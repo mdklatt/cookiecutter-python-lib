@@ -9,15 +9,15 @@ from setuptools import setup
 
 _config = {
     "name": "{{ cookiecutter.lib_name }}",
-    "author": "{{ cookiecutter.author_name   }}",
+    "url": "{{ cookiecutter.project_url }}",
+    "author": "{{ cookiecutter.author_name }}",
     "author_email": "{{ cookiecutter.author_email }}",
-    "url": "",
     "package_dir": {"": "src"},
     "packages": find_packages("src")
 }
 
 
-def main():
+def main() -> int:
     """ Execute the setup commands.
 
     """
