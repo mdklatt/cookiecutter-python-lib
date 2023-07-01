@@ -21,7 +21,7 @@ Run the test suite:
 
 .. code-block:: console
    
-    $ python -m pytest test/
+    $ python -m pytest tests/
 
 
 Build documentation:
