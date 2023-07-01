@@ -1,4 +1,0 @@
-## Python requirements for using the {{ cookiecutter.lib_name }} library. 
-##
-##   python -m pip install --requirement=requirements.txt
-##

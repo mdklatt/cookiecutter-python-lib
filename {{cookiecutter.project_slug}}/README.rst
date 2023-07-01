@@ -3,23 +3,8 @@
 {{ cookiecutter.lib_name }}
 {{ delim }}
 
-This is the {{ cookiecutter.lib_name }} library.
-
-
-Minimum Requirements
-====================
-
-- Python 3.4
-
-
-Optional Requirements
-=====================
-
-.. _pytest: http://pytest.org
-.. _Sphinx: http://sphinx-doc.org
-
-- `pytest`_ (for running the test suite)
-- `Sphinx`_ (for generating documentation)
+Python library created from the `mdklatt/cookiecutter-python-lib`_ template.
+Python 3.8+ is required.
 
 
 Basic Setup
@@ -29,18 +14,21 @@ Install for the current user:
 
 .. code-block:: console
 
-    $ python setup.py install --user
+    $ python -m pip install -e ".[dev]"
 
 
 Run the test suite:
 
 .. code-block:: console
    
-    $ pytest test/
+    $ python -m pytest test/
 
 
 Build documentation:
 
 .. code-block:: console
 
-    $ sphinx-build -b html doc doc/_build/html
+    $ python -m sphinx -b html doc doc/_build/html
+
+
+.. _mdklatt/cookiecutter-python-lib: https://github.com/mdklatt/cookiecutter-python-lib
