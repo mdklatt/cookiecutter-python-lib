@@ -2,41 +2,20 @@
 Python Library Project Template
 ###############################
 
-.. _travis: https://travis-ci.org/mdklatt/cookiecutter-python-lib
-.. |travis.png| image:: https://travis-ci.org/mdklatt/cookiecutter-python-lib.png
-   :alt: Travis CI build status
-   :target: `travis`_
+|python3.8|
+|python3.9|
+|python3.10|
+|python3.11|
+|license|
+|tests|
 
-|travis.png|
-
-.. _Cookiecutter: http://cookiecutter.readthedocs.org
-.. _Python Packaging User Guide: https://packaging.python.org/en/latest/distributing.html#configuring-your-project
-.. _Packaging a Python library: http://blog.ionelmc.ro/2014/05/25/python-packaging/
-
-
-This is a `Cookiecutter`_ template for creating a Python library project.
-
-The project layout is based on the `Python Packaging User Guide`_. The current
-conventional wisdom forgoes the use of a source directory, but moving the 
-package out of the project root provides several advantages (*cf.* 
-`Packaging a Python library`_).
+This is a `Cookiecutter`_ template for creating a Python library project based
+on the `Python Packaging User Guide`_.
 
 
-.. _py27: https://github.com/mdklatt/cookiecutter-python-lib/tree/py27
+**Project features:**
 
-The `py27`_ branch is for Python 2.7 compatibility; it is no longer actively
-maintained.
-
-
-================
-Project Features
-================
-
-.. _pytest: http://pytest.org
-.. _Sphinx: http://sphinx-doc.org
-.. _MIT License: http://choosealicense.com/licenses/mit
-
-- Python 3.5+
+- Python 3.8+
 - `MIT License`_
 - `pytest`_ test suite
 - `Sphinx`_ documentation
@@ -46,17 +25,51 @@ Project Features
 Usage
 =====
 
-.. _GitHub: https://github.com/mdklatt/cookiecutter-python-lib
-
 Install Python requirements for using the template:
 
-.. code-block:: console
+.. code-block::
 
-  $ python -m pip install --requirement=requirements.txt --user 
+    $ python -m pip install -r requirements.txt
 
 
 Create a new project directly from the template on `GitHub`_:
 
-.. code-block:: console
-   
-  $ cookiecutter gh:mdklatt/cookiecutter-python-lib
+.. code-block::
+
+    $ cookiecutter gh:mdklatt/cookiecutter-python-lib
+
+
+===========
+Development
+===========
+
+Create a local development environment and run template tests:
+
+.. code-block::
+
+    $ make dev test
+
+
+.. |python3.8| image:: https://img.shields.io/static/v1?label=python&message=3.8&color=informational
+   :alt: Python 3.8
+.. |python3.9| image:: https://img.shields.io/static/v1?label=python&message=3.9&color=informational
+   :alt: Python 3.9
+.. |python3.10| image:: https://img.shields.io/static/v1?label=python&message=3.10&color=informational
+   :alt: Python 3.10
+.. |python3.11| image:: https://img.shields.io/static/v1?label=python&message=3.11&color=informational
+   :alt: Python 3.11
+.. |license| image:: https://img.shields.io/github/license/mdklatt/httpexec
+   :alt: MIT License
+   :target: `MIT License`_
+.. |tests| image:: https://github.com/mdklatt/cookiecutter-python-lib/actions/workflows/test.yml/badge.svg
+   :alt: CI Test
+   :target: `GitHub Actions`_
+
+
+.. _Cookiecutter: http://cookiecutter.readthedocs.org
+.. _Python Packaging User Guide: https://packaging.python.org/en/latest/tutorials/packaging-projects
+.. _GitHub: https://github.com/mdklatt/cookiecutter-python-lib
+.. _GitHub Actions: https://github.com/mdklatt/cookiecutter-python-lib/actions/workflows/test.yml
+.. _MIT License: http://choosealicense.com/licenses/mit
+.. _pytest: http://pytest.org
+.. _Sphinx: http://sphinx-doc.org
