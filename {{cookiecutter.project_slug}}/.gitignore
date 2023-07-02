@@ -8,14 +8,15 @@ dist/
 *.pyo
 
 
-# Ignore pyenv files.
+# Ignore Python environments.
 
 .python-version
-
-
-# Ignore venv environments.
-
 venv*/
+
+
+# Ignore Make artifacts.
+
+**/.make-update
 
 
 # Ignore Vagrant runtime files.
