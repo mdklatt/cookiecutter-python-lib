@@ -4,6 +4,5 @@
     "lib_name": "{{ cookiecutter.project_slug }}",
     "author_name": "",
     "author_email": "",
-    "project_version": "0.1.0.dev0",
-    "sphinx_theme": "alabaster"
+    "project_version": "0.1.0.dev0"
 }
